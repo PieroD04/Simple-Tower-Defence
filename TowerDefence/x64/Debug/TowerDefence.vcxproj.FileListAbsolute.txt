@@ -1,0 +1,4 @@
+D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.vcxproj.AssemblyReference.cache
+D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.vcxproj.SuggestedBindingRedirects.cache
+D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.FormMenu.resources
+D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.vcxproj.GenerateResource.cache
