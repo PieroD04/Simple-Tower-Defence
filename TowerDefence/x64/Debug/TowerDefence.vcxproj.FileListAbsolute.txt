@@ -2,3 +2,8 @@ D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.vcxproj.AssemblyRefer
 D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.vcxproj.SuggestedBindingRedirects.cache
 D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.FormMenu.resources
 D:\coding\TowerDefence\TowerDefence\x64\Debug\TowerDefence.vcxproj.GenerateResource.cache
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\x64\Debug\TowerDefence.vcxproj.AssemblyReference.cache
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\x64\Debug\TowerDefence.vcxproj.SuggestedBindingRedirects.cache
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\x64\Debug\TowerDefence.FormGame.resources
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\x64\Debug\TowerDefence.FormMenu.resources
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\x64\Debug\TowerDefence.vcxproj.GenerateResource.cache

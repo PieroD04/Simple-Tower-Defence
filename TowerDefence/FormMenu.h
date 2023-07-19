@@ -1,5 +1,5 @@
 #pragma once
-
+#include "FormGame.h"
 namespace TowerDefence {
 
 	using namespace System;
@@ -117,7 +117,7 @@ namespace TowerDefence {
 			this->Controls->Add(this->button1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"FormMenu";
-			this->Text = L"FormMenu";
+			this->Text = L"Tower Defence";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
@@ -125,7 +125,10 @@ namespace TowerDefence {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-
+		FormGame^ game = gcnew FormGame();
+		this->Visible = false;
+		game->ShowDialog();
+		this->Close();
 	}
 };
 }

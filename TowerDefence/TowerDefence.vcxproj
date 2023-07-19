@@ -119,14 +119,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FormGame.cpp" />
     <ClCompile Include="FormMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FormGame.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormMenu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Game.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormGame.resx">
+      <DependentUpon>FormGame.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.h</DependentUpon>
     </EmbeddedResource>
