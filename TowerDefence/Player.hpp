@@ -10,7 +10,7 @@ class Player : public Entity
     Direction lastKeyPressed;
     Direction direction;
 public:
-    Player() :Entity(550, 500, 0, 0, 67, 58, true, Direction::None)
+    Player() :Entity(550, 500, 0, 0, 67, 58, true)
     {
         this->indexX = 0;
         this->indexY = 0;
@@ -21,6 +21,8 @@ public:
     ~Player() {}
 
     void setDirection(Direction direction) { this->direction = direction; }
+    Direction getDirection() { return this->direction; }
+    Direction getLastKey() { return this->lastKeyPressed; }
     System::Drawing::Rectangle getHitbox() { return System::Drawing::Rectangle(x, y, width, height); }
 
     void move(System::Drawing::Bitmap^ character, System::Drawing::BufferedGraphics^ buffer)

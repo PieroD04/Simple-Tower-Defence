@@ -7,9 +7,8 @@ class Entity
 protected:
 	int x, y, dx, dy, width, height;
 	bool visibility;
-	Direction direction;
 public:
-	Entity(int x, int y, int dx, int dy, int width, int height, bool visibility, Direction direction) :
+	Entity(int x, int y, int dx, int dy, int width, int height, bool visibility) :
 		x(x), y(y), dx(dx), dy(dy), width(width), height(height), visibility(visibility) {}
 
 	~Entity() {}
@@ -19,7 +18,4 @@ public:
 	int getWidth() { return	width; }
 	int getHeight() { return height; }
 	bool getVisibility() { return visibility; }
-	Direction getDirection() { return direction; }
-	virtual void draw(System::Drawing::Bitmap^ img, System::Drawing::BufferedGraphics^ buffer) {}
-	virtual System::Drawing::Rectangle getHitbox() = 0;
 };

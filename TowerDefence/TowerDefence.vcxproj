@@ -123,6 +123,9 @@
     <ClCompile Include="FormMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arrow.hpp" />
+    <ClInclude Include="ArrowManager.hpp" />
+    <ClInclude Include="Entity.hpp" />
     <ClInclude Include="FormGame.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -130,6 +133,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Player.hpp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormGame.resx">
