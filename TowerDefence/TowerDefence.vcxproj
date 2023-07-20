@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="Arrow.hpp" />
     <ClInclude Include="ArrowManager.hpp" />
+    <ClInclude Include="Enemy.hpp" />
     <ClInclude Include="Entity.hpp" />
     <ClInclude Include="FormGame.h">
       <FileType>CppForm</FileType>

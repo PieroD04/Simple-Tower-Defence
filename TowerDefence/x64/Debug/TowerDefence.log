@@ -1,9 +1,9 @@
 ﻿  FormGame.cpp
-D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(50,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(50,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(54,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(54,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   FormMenu.cpp
-D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(50,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(50,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(54,148): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\coding\TowerDefence\Simple-Tower-Defence\TowerDefence\Game.hpp(54,105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Generating Code...
   FormGame.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   TowerDefence.vcxproj -> D:\coding\TowerDefence\Simple-Tower-Defence\x64\Debug\TowerDefence.exe

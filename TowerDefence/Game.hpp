@@ -1,10 +1,13 @@
 #pragma once
 #include "Player.hpp"
 #include "ArrowManager.hpp"
+#include "Enemy.hpp"
 class Game
 {
 	Player player;
 	ArrowManager arrowsPlayer;
+	Archer test;
+	Warrior test2;
 public:
 	Game(){}
 	~Game(){}
@@ -14,6 +17,7 @@ public:
 	void play(System::Drawing::BufferedGraphics^ buffer)
 	{
 		_drawAll(buffer);
+
 		_erase();
 	}
 
@@ -57,10 +61,17 @@ private:
 		//Drawing arrows
 		System::Drawing::Bitmap^ arrowImage = gcnew System::Drawing::Bitmap("../Content/arrows.png");
 		arrowsPlayer.draw(arrowImage, buffer);
+
+		//Drawing enemies
+		System::Drawing::Bitmap^ archerImage = gcnew System::Drawing::Bitmap("../Content/archer.png");
+		test.move(archerImage, buffer);
+		System::Drawing::Bitmap^ warriorImage = gcnew System::Drawing::Bitmap("../Content/warrior.png");
+		test2.move(warriorImage, buffer);
 	}
 
 	void _erase()
 	{
 		arrowsPlayer.eraseByVisibility();
+
 	}
 };
