@@ -135,6 +135,8 @@
     </ClInclude>
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Player.hpp" />
+    <ClInclude Include="Turret.hpp" />
+    <ClInclude Include="TurretManager.hpp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormGame.resx">

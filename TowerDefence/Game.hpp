@@ -1,25 +1,22 @@
 #pragma once
 #include "Player.hpp"
 #include "ArrowManager.hpp"
+#include "TurretManager.hpp"
 #include "Enemy.hpp"
+
+const float turretSpeed = 0.5;
+
 class Game
 {
 	Player player;
 	ArrowManager arrowsPlayer;
+	ArrowManager arrowsTurrets;
+	TurretManager turrets;
 	Archer test;
 	Warrior test2;
 public:
 	Game(){}
 	~Game(){}
-
-
-
-	void play(System::Drawing::BufferedGraphics^ buffer)
-	{
-		_drawAll(buffer);
-
-		_erase();
-	}
 
 	void detectKeys(System::Windows::Forms::Keys keys)
 	{
@@ -40,10 +37,21 @@ public:
 		case System::Windows::Forms::Keys::Space:
 			arrowsPlayer.insert(player.getX(), player.getY(), player.getLastKey());
 			break;
+		case System::Windows::Forms::Keys::T:
+			turrets.insert(player.getX(), player.getY(), player.getLastKey());
+			break;
 		case System::Windows::Forms::Keys::None:
 			player.setDirection(Direction::None);
 			break;
 		}
+	}
+	void play(System::Drawing::BufferedGraphics^ buffer)
+	{
+		
+		
+		_drawAll(buffer);
+
+		_erase();
 	}
 
 private:
@@ -61,6 +69,12 @@ private:
 		//Drawing arrows
 		System::Drawing::Bitmap^ arrowImage = gcnew System::Drawing::Bitmap("../Content/arrows.png");
 		arrowsPlayer.draw(arrowImage, buffer);
+		_turretsShot();
+		arrowsTurrets.draw(arrowImage, buffer);
+
+		//Drawing turrets
+		System::Drawing::Bitmap^ turretImage = gcnew System::Drawing::Bitmap("../Content/turrets.png");
+		turrets.draw(turretImage, buffer);
 
 		//Drawing enemies
 		System::Drawing::Bitmap^ archerImage = gcnew System::Drawing::Bitmap("../Content/archer.png");
@@ -68,10 +82,19 @@ private:
 		System::Drawing::Bitmap^ warriorImage = gcnew System::Drawing::Bitmap("../Content/warrior.png");
 		test2.move(warriorImage, buffer);
 	}
-
 	void _erase()
 	{
 		arrowsPlayer.eraseByVisibility();
+		arrowsTurrets.eraseByVisibility();
+		turrets.eraseByVisibility();
 
+	}
+
+	void _turretsShot()
+	{
+		for (int i = 0; i < turrets.getSize(); i++)
+		{
+			if( turrets.canTurretShoot(i) ) arrowsTurrets.insert(turrets.getX(i), turrets.getY(i), turrets.getDirection(i) );
+		}
 	}
 };

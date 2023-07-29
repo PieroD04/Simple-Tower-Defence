@@ -1,6 +1,8 @@
 #pragma once
 #include "Entity.hpp"
 
+const int arrowSpeed = 30;
+
 class Arrow : public Entity
 {
 public:
@@ -14,7 +16,7 @@ public:
 class RightArrow : public Arrow
 {
 public:
-	RightArrow(int x, int y) : Arrow(x, y, 20, 0, 68, 60, true) {}
+	RightArrow(int x, int y) : Arrow(x, y, arrowSpeed, 0, 68, 60, true) {}
 	~RightArrow() {}
 
 	void draw(System::Drawing::Bitmap^ arrowImage, System::Drawing::BufferedGraphics^ buffer)
@@ -38,7 +40,7 @@ public:
 class LeftArrow : public Arrow
 {
 public:
-	LeftArrow(int x, int y) : Arrow(x, y, -20, 0, 68, 60, true) {}
+	LeftArrow(int x, int y) : Arrow(x, y, -arrowSpeed, 0, 68, 60, true) {}
 	~LeftArrow() {}
 
 	void draw(System::Drawing::Bitmap^ arrowImage, System::Drawing::BufferedGraphics^ buffer)
@@ -62,7 +64,7 @@ public:
 class UpArrow : public Arrow
 {
 public:
-	UpArrow(int x, int y) : Arrow(x, y, 0, -20, 68, 60, true) {}
+	UpArrow(int x, int y) : Arrow(x, y, 0, -arrowSpeed, 68, 60, true) {}
 	~UpArrow() {}
 
 	void draw(System::Drawing::Bitmap^ arrowImage, System::Drawing::BufferedGraphics^ buffer)
@@ -86,7 +88,7 @@ public:
 class DownArrow : public Arrow
 {
 public:
-	DownArrow(int x, int y) : Arrow(x, y, 0, 20, 68, 60, true) {}
+	DownArrow(int x, int y) : Arrow(x, y, 0, arrowSpeed, 68, 60, true) {}
 	~DownArrow() {}
 
 	void draw(System::Drawing::Bitmap^ arrowImage, System::Drawing::BufferedGraphics^ buffer)
